@@ -24,15 +24,34 @@
 }
 
 .remove-button {
-  background-color: #dc3545;
+  background-color: #B6BBC4;
+  /*#dc3545;*/
   color: #fff;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-right: 20px;
+}
+
+.move-to-cart-button{
+  background-color: #1960e0;
+  /*#dc3545;*/
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 30px;
 }
 
 .remove-button:hover {
   background-color: #c82333;
+}
+
+.wishlist-item img {
+  width: 20%;
+  height: auto;
 }

@@ -25,7 +25,7 @@ const BoardAdmin = () => {
     if (document.cookie.includes("userCookie")) {
       UserService.getAdminBoard().then(
         (response) => {
-          if (response.data.includes("Admin Board")) {
+           if (response.data.includes("Admin Board")) {
             setContent(
               <div>
                 <h2 className="mb-4">Welcome to {response.data}  !!</h2>
@@ -112,7 +112,7 @@ const BoardAdmin = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container-xxl mt-5">
       <div className="jumbotron">
         <h3>{content}</h3>
       </div>

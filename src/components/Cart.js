@@ -32,11 +32,11 @@ const Home = () => {
 
   useEffect(() => {
     if (loggedIn) {
-      const Capstone = `http://20.127.159.231:3000/?&id=${userName}++email=${userEmail}`;
+      const Capstone = `http://20.127.159.231:3000/?&id=${userName}&email=${userEmail}`;
 
       setContent(
         <iframe
-          title="Flipkart"
+          title="Cart"
           src={Capstone}
           width="100%"
           height="100%"
@@ -49,8 +49,9 @@ const Home = () => {
     }
   }, [loggedIn, userCookie1, userName, userEmail]);
 
+
   return (
-    <div className="container" style={{ height: '100vh', width: '100vw', overflow: 'hidden' }}>
+    <div className="container-xxl" style={{ height: '100vh', width: '100vw', overflow: 'hidden', margin: 0, padding: 0 }}>
       <header className="">
         {/* Add header content if needed */}
       </header>

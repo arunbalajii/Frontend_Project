@@ -2,6 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const API_URL = "http://52.142.30.237:9001/api/auth/";
+// const API_URL = "http://localhost:3000/api/auth/";
 
 const register = (username, email, password, firstName, lastName, roles, gender, phone, no, street1, street2, city, pincode) => {
   return axios.post(API_URL + "signup", { 

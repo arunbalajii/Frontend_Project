@@ -96,5 +96,8 @@ iframe {
   right: 0
 }
 
+.admin-link {
+  color: black; /* Set the desired font color */
+}
 
 

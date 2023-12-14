@@ -31,7 +31,8 @@ const App = () => {
 
     if (user) {
       setCurrentUser(user);
-      const canAccessAdmin = window.location.href.includes("/admin");
+      const canAccessAdmin = true;/*window.location.href.includes("/admin");*/
+        // const canAccessAdmin = window.location.href.includes("/admin");
       setShowAdminBoard(canAccessAdmin);
     }
 
@@ -77,7 +78,7 @@ const App = () => {
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <Link to={"/"} className="navbar-brand">
-          EKart
+            WalEcart
         </Link>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
@@ -86,29 +87,29 @@ const App = () => {
             </Link>
           </li>
 
-          {showModeratorBoard && (
-            <li className="nav-item">
-              <Link to={"/mod"} className="nav-link">
-                Moderator Board
-              </Link>
-            </li>
-          )}
+          {/*{showModeratorBoard && (*/}
+          {/*  <li className="nav-item">*/}
+          {/*    <Link to={"/mod"} className="nav-link">*/}
+          {/*      Moderator Board*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*)}*/}
 
           {showAdminBoard && (
             <li className="nav-item">
-              <Link to={"/admin"} className="nav-link">
-                Admin Board
+              <Link to={"/admin"} className="nav-link admin-link">
+                Admin-Board
               </Link>
             </li>
           )}
 
-          {currentUser && (
-            <li className="nav-item">
-              <Link to={"/user"} className="nav-link">
-                User
-              </Link>
-            </li>
-          )}
+          {/*{currentUser && (*/}
+          {/*  <li className="nav-item">*/}
+          {/*    <Link to={"/user"} className="nav-link">*/}
+          {/*      User*/}
+          {/*    </Link>*/}
+          {/*  </li>*/}
+          {/*)}*/}
         </div>
 
         {currentUser ? (
@@ -158,7 +159,7 @@ const App = () => {
         )}
       </nav>
 
-      <div className="container mt-3">
+      <div className="container-xxl mt-3">
         <Routes>
           <Route exact path={"/"} element={<Home />} />
           <Route exact path={"/home"} element={<Home />} />
@@ -181,5 +182,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;

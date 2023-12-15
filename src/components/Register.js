@@ -150,7 +150,7 @@ const Register = (props) => {
 
     form.current.validateAll();
     alert('User Registration Process - '+email);
-    axios.post('http://localhost:8080/sendHTMLEmailLink', {
+    axios.post('http://52.142.30.237:9002/sendHTMLEmailLink', {
                email,
                "Action": "validate"
               })
